@@ -22,82 +22,135 @@
       body {
         position: relative;
       }
-      p {
-        font-size: 16px;
-      }
       .containera {
         position: relative;
+        height: 100vh;
         width: 100%;
-        min-height: 50vh;
-        padding: 30px 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
-        background: linear-gradient(to right, #00a63e, #155dfc);
-        color: white;
+        padding: 30px 30px;
+        background-image: url("imga.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
-      .containera h1 {
-        font-size: 50px;
-        text-align: center;
-      }
-      .containera p {
-        font-size: 20px;
-        text-align: center;
-      }
-      .conaBox {
+      header {
         position: relative;
+        height: 50px;
+        width: 100%;
         display: flex;
         align-items: center;
-        gap: 20px;
+        justify-content: space-between;
       }
-      .conaBoxa {
-        width: 170px;
-        padding: 20px 20px;
+      .logo {
+        color: white;
+        font-size: 30px;
+      }
+      .headerBut {
+        position: absolute;
+        right: 0%;
+        bottom: 10px;
+        width: 192.48px;
+        padding: 15px 15px;
         border-radius: 10px;
-        background-color: white;
-        color: #454545;
+        background: red;
+        color: white;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         text-decoration: none;
         font-weight: 600;
+        cursor: pointer;
         text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
-      .conaBoxb {
-        padding: 10px 10px;
+      .headerButb {
+        position: relative;
+        width: max-content;
+        padding: 15px 15px;
         border-radius: 10px;
-        background-color: green;
-        color: black;
+        background: linear-gradient(45deg, #4b8aab, #f7e08f);
+        color: white;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         text-decoration: none;
         font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
       main {
         position: relative;
+        height: calc(100vh - 100px);
         display: flex;
         flex-direction: column;
-      }
-      .containerb {
-        position: relative;
-        width: 100%;
-        min-height: 50vh;
-        padding: 20px 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        align-items: start;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
+        color: white;
       }
-      .containerb h1 {
-        color: #1e2939;
+      main h1 {
+        font-size: 5rem;
+      }
+      main p {
+        font-size: 20px;
+      }
+      .containerb,
+      .containerc {
+        position: relative;
+        min-height: 50vh;
+        width: 100%;
+        padding: 30px 30px;
+        background-color: #010006;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      ul {
+        margin-left: 20px;
+        list-style-type: square;
+      }
+      li {
+        padding: 10px;
+      }
+      ion-icon {
+        font-size: 20px;
+      }
+      .containerc h1 {
+        width: 100%;
         text-align: center;
       }
-      .minConb {
+      .concBox {
         position: relative;
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
+        margin-top: 5px;
+      }
+      .mincbox {
+        flex: 1 0 300px;
+        position: relative;
+        height: 121px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 10px;
+        background-color: rgba(225, 225, 225, 0.2);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #666;
+        cursor: pointer;
+        color: white;
+        transition: 1s;
+      }
+      .mincbox:hover {
+        background-color: white;
+        color: black;
+      }
+      .mincbox p {
+        text-align: center;
       }
       .minconbCard {
         flex: 1 0 300px;
@@ -110,9 +163,15 @@
         flex-direction: column;
         gap: 15px;
         border-radius: 10px;
+        background-color: white;
+        color: black;
         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
+        transition: 1s;
+      }
+      .minconbCard:hover {
+        transform: scale(1.02);
       }
       .minconbCard h2 {
         text-align: center;
@@ -120,114 +179,8 @@
       .minconbCard p {
         text-align: center;
       }
-      .containerc {
-        position: relative;
-        background-color: #f3f3f3;
-        width: 100%;
-        min-height: 50vh;
-        padding: 20px 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-      }
-      .containerc h1 {
-        color: #1e2939;
-      }
-      .containerc h2 {
-        color: red;
-      }
-      .containerc p {
-        font-weight: 600;
-        font-size: 20px;
-      }
-      .contaienre {
-        position: relative;
-        /* background-color: #fff6f6; */
-        width: 100%;
-        min-height: 50vh;
-        padding: 20px 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-      }
-      .containerd {
-        position: relative;
-        /* background-color: #fff6f6; */
-        width: 100%;
-        min-height: 50vh;
-        padding: 20px 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-      }
-      .contaenre h1 {
-        color: #1e2939;
-      }
-      .concBox {
-        position: relative;
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;
-      }
-      ion-icon {
-        font-size: 25px;
-        color: green;
-      }
-      .conBoxp {
-        position: relative;
-        padding: 20px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 5px;
-        transition: 1s;
-        cursor: pointer;
-        border: 1px solid transparent;
-        border-radius: 10px;
-      }
-      .conBoxp:hover {
-        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-      }
-      .containerf {
-        position: relative;
-        width: 100%;
-        min-height: 50vh;
-        padding: 30px 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
-        background: linear-gradient(to right, #155dfc, #00a63e);
-        color: white;
-      }
-      .containerg {
-        position: relative;
-        background-color: #101828;
-        position: relative;
-        width: 100%;
-        padding: 30px 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
-      }
-      .containerg p {
-        text-align: center;
-        color: #666;
-        line-height: 30px;
-      }
       .containerh {
         position: relative;
-        background-color: #f3f3f3;
         width: 100%;
         min-height: 50vh;
         padding: 20px 20px;
@@ -275,7 +228,8 @@
         color: #155dfc;
       }
       .submitForm {
-        padding: 10px 10px;
+        padding: 15px 10px;
+        width: 100%;
         transition: 1s;
         font-weight: 600;
         font-size: 16px;
@@ -290,7 +244,6 @@
       }
       .containeri {
         position: relative;
-        background-color: #f3f3f3;
         width: 100%;
         min-height: 50vh;
         padding: 20px 20px;
@@ -328,219 +281,312 @@
       .fqBox.active .ans {
         display: block;
       }
-      @media (max-width: 540px) {
-        .containera {
-          padding: 30px 30px;
+      .containerf {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+      }
+      .containerf::before {
+        content: "";
+        height: 200px;
+        width: 200px;
+        background: radial-gradient(#dddddd 10%, #004fff 90%);
+        border-radius: 50%;
+        position: absolute;
+      }
+      .minfBox {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        background-color: transparent;
+        backdrop-filter: blur(15px);
+        color: black;
+      }
+      .containerg {
+        position: relative;
+        background-color: #000;
+        position: relative;
+        width: 100%;
+        padding: 30px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .containerg p {
+        text-align: center;
+        color: wheat;
+        line-height: 30px;
+      }
+      #arrowani {
+        /* relative to button */
+        font-size: 28px;
+        transition: transform 0.3s ease;
+        z-index: 1;
+        position: relative;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          top: 0;
         }
-        .containera h1 {
-          font-size: 28px;
-        }
-        .containera p {
-          font-size: 16px;
-        }
-        .conaBoxa {
-          padding: 15px 20px;
-        }
-        h1 {
-          font-size: 25px;
-        }
-        .fBoxform {
-          width: 100%;
-        }
-        .concBox {
-          display: flex;
-          flex-direction: column;
-        }
-        .minconfBox {
-          width: 100%;
-        }
-        .containerf,
-        .containerg {
-          padding: 20px 20px;
-        }
-        .containerg p {
-          line-height: 20px;
-        }
-        .minconbCard {
-          flex: 1 0 250px;
+        50% {
+          top: 10px; /* how much it moves down */
         }
       }
-      @media (max-width: 300px) {
+      .newarrow {
+        position: absolute;
+        color: #004fff;
+        left: 80%;
+      }
+      @media (max-width: 445px) {
+        h1 {
+          font-size: 21px;
+          text-align: center;
+        }
+        main {
+          justify-content: start;
+        }
+        main h1 {
+          font-size: 3rem;
+        }
         .minconbCard {
-          flex: 1 0 150px;
-          height: max-content;
+          flex: 1 0 260px;
         }
-        .formminBox {
-          flex: 0;
-          width: 100%;
+        .mincbox {
+          flex: 1 0 260px;
         }
-        ion-icon {
-          font-size: 36px;
+        .fBoxform {
+          width: auto;
+        }
+        .minconfBox {
+          width: auto;
+        }
+        .containerg {
+          padding: 30px;
         }
       }
     </style>
   </head>
   <body>
-    <header>
-      <section class="containera">
-        <h1>Smart AI-Powered Investment Recommendations</h1>
+    <section class="containera">
+      <header>
+        <p class="logo"><ion-icon name="logo-tableau"></ion-icon></p>
+      </header>
+      <main>
+        <h1>INVESTLY</h1>
+        <h2>Invest Smart. Grow Confidently.</h2>
         <p>
-          Invest confidently across stocks, crypto, mutual funds, FDs, and more
-          — tailored to your goals.
+          AI-powered, personalized investment guidance across stocks, crypto,
+          mutual funds, FDs, and more — all in one smart dashboard.
         </p>
-        <div class="conaBox">
-          <a href="" class="conaBoxa">Get Started</a>
+        <a href="" class="headerBut"
+          >Get Started Free
+          <ion-icon name="arrow-forward-outline" id="arrowani"></ion-icon
+        ></a>
+      </main>
+    </section>
+    <section class="containerb">
+      <h1>Too Many Options. Too Little Guidance.</h1>
+      <ul>
+        <li>
+          <ion-icon name="analytics-outline"></ion-icon>
+          <strong>Too Many Choices:</strong><br />
+          Stocks, crypto, mutual funds, FDs, real estate — it’s hard to know
+          where to start.
+        </li>
+        <li>
+          <ion-icon name="extension-puzzle-outline"></ion-icon>
+          <strong>Confusing Jargon:</strong><br />Terms like CAGR, NAV, P/E
+          ratio, and compounding scare beginners away.
+        </li>
+        <li>
+          <ion-icon name="close-outline"></ion-icon>
+          <strong>Biased Advice:</strong><br />Many platforms push their own
+          products instead of giving unbiased recommendations.
+        </li>
+        <li>
+          <ion-icon name="sad-outline"></ion-icon>
+          <strong>Fear of Loss:</strong><br />New investors worry about losing
+          money because they don’t understand risk management.
+        </li>
+        <li>
+          <ion-icon name="hourglass-outline"></ion-icon>
+          <strong>Time-Consuming Research: </strong><br />Analyzing markets,
+          comparing assets, and tracking portfolios takes too much effort.
+        </li>
+        <li>
+          <ion-icon name="sync-circle-outline"></ion-icon>
+          <strong>No Clear Goal Alignment:</strong><br />People often invest
+          randomly without a clear financial plan, leading to poor returns.
+        </li>
+        <li>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <strong>Trust Issues:</strong><br />Not knowing if a platform is
+          secure or compliant makes people hesitant to try.
+        </li>
+      </ul>
+    </section>
+    <section class="containerc">
+      <h1>Investly Makes Investing Easy</h1>
+      <h2>How it works</h2>
+      <div class="concBox">
+        <div class="minconbCard">
+          <h3>1</h3>
+          <p>Tell us your goals</p>
         </div>
-      </section>
-    </header>
-    <main>
-      <section class="containerb">
-        <h1>Why Investly?</h1>
-        <div class="minConb">
-          <div class="minconbCard">
-            <h2>Too Many Options</h2>
-            <p>We simplify investing so you don't feel overwhelmed.</p>
-          </div>
-          <div class="minconbCard">
-            <h2>AI-Powered Guidance</h2>
-            <p>Unbiased, personalized suggestions based on your profile.</p>
-          </div>
-          <div class="minconbCard">
-            <h2>Goal-Oriented</h2>
-            <p>Stay on track with smart insights and alerts.</p>
-          </div>
+        <div class="minconbCard">
+          <h3>2</h3>
+          <p>Get AI-powered recommendations</p>
         </div>
-      </section>
-      <section class="containerc">
-        <h1>How it works</h1>
-        <div class="minConb">
-          <div class="minconbCard">
-            <h2>1</h2>
-            <p>Tell us your goals</p>
-          </div>
-          <div class="minconbCard">
-            <h2>2</h2>
-            <p>Get AI-powered recommendations</p>
-          </div>
-          <div class="minconbCard">
-            <h2>3</h2>
-            <p>Track & grow your portfolio</p>
-          </div>
+        <div class="minconbCard">
+          <h3>3</h3>
+          <p>Track & grow your portfolio</p>
         </div>
-      </section>
-      <section class="containerd">
-        <h1 style="text-align: center">
-          See All Your Investments in One Smart Dashboard
-        </h1>
-      </section>
-      <section class="containerh">
-        <h1>Estimate Your Investment Growth</h1>
-        <div class="fBoxform">
-          <form>
-            <div class="formminBox">
-              <label>Investment Amount (₹)</label>
-              <input
-                type="number"
-                id="amount"
-                placeholder="Enter amount"
-                class="inputValue"
-                required
-              />
-            </div>
-            <div class="formminBox">
-              <label>Expected Annual Rate of Return (%)</label>
-              <input
-                type="number"
-                id="rate"
-                placeholder="Enter rate (e.g., 8)"
-                class="inputValue"
-                required
-              />
-            </div>
+      </div>
+      <h2>Features:</h2>
+      <div class="concBox">
+        <div class="mincbox">
+          <h3>AI-Powered Suggestions</h3>
+          <p>
+            Personalized recommendations based on your goals and risk profile.
+          </p>
+        </div>
+        <div class="mincbox">
+          <h3>Goal Tracking</h3>
+          <p>See your investments grow toward your objectives.</p>
+        </div>
+        <div class="mincbox">
+          <h3>Multi-Asset Support</h3>
+          <p>Stocks, crypto, mutual funds, FDs, real estate.</p>
+        </div>
+        <div class="mincbox">
+          <h3>Interactive Dashboard</h3>
+          <p>Track, visualize, and simulate growth.</p>
+        </div>
+        <div class="mincbox">
+          <h3>Smart Alerts</h3>
+          <p>Stay informed with timely insights.</p>
+        </div>
+      </div>
+      <div
+        style="
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <a href="" class="headerButb"
+          >Get Started Free <ion-icon name="arrow-forward-outline"></ion-icon
+        ></a>
+      </div>
+    </section>
+    <section class="containerh">
+      <h1>Estimate Your Investment Growth</h1>
+      <div class="fBoxform">
+        <form>
+          <div class="formminBox">
+            <label>Investment Amount (₹)</label>
+            <input
+              type="number"
+              id="amount"
+              placeholder="Enter amount"
+              class="inputValue"
+              required
+            />
+          </div>
+          <div class="formminBox">
+            <label>Expected Annual Rate of Return (%)</label>
+            <input
+              type="number"
+              id="rate"
+              placeholder="Enter rate (e.g., 8)"
+              class="inputValue"
+              required
+            />
+          </div>
 
-            <div class="formminBox">
-              <label>Investment Duration (Years)</label>
-              <input
-                type="number"
-                id="years"
-                placeholder="Enter years"
-                class="inputValue"
-                required
-              />
-            </div>
+          <div class="formminBox">
+            <label>Investment Duration (Years)</label>
+            <input
+              type="number"
+              id="years"
+              placeholder="Enter years"
+              class="inputValue"
+              required
+            />
+          </div>
 
-            <div class="formminBox">
-              <label>Compounding Frequency</label>
-              <select id="frequency" class="inputValue">
-                <option value="1">Yearly</option>
-                <option value="4">Quarterly</option>
-                <option value="12">Monthly</option>
-              </select>
-            </div>
+          <div class="formminBox">
+            <label>Compounding Frequency</label>
+            <select id="frequency" class="inputValue">
+              <option value="1">Yearly</option>
+              <option value="4">Quarterly</option>
+              <option value="12">Monthly</option>
+            </select>
+          </div>
 
-            <button onclick="calculateGrowth(event)" class="submitForm">
-              Calculate
-            </button>
-          </form>
-        </div>
-        <div id="result"></div>
-      </section>
-      <section class="contaienre">
-        <h1>Features</h1>
-        <div class="concBox">
-          <p class="conBoxp">
-            <ion-icon name="checkmark-done-outline"></ion-icon> Personalized
-            investment advice
-          </p>
-          <p class="conBoxp">
-            <ion-icon name="checkmark-done-outline"></ion-icon> Goal tracking &
-            smart alerts
-          </p>
-          <p class="conBoxp">
-            <ion-icon name="checkmark-done-outline"></ion-icon> Multiple asset
-            classes support
-          </p>
-          <p class="conBoxp">
-            <ion-icon name="checkmark-done-outline"></ion-icon> Secure &
-            transparent platform
+          <button onclick="calculateGrowth(event)" class="submitForm">
+            Calculate
+          </button>
+        </form>
+      </div>
+      <div id="result"></div>
+    </section>
+    <section class="containeri">
+      <h1>Frequently Asked Questions</h1>
+      <div class="minconfBox">
+        <div class="fqBox">
+          <h3>Is Investly free to use?</h3>
+          <p class="ans">
+            Yes, you can start using Investly for free. We offer premium
+            features later for advanced users.
           </p>
         </div>
-      </section>
-      <section class="containeri">
-        <h1>Frequently Asked Questions</h1>
-        <div class="minconfBox">
-          <div class="fqBox">
-            <h3>Is Investly free to use?</h3>
-            <p class="ans">
-              Yes, you can start using Investly for free. We offer premium
-              features later for advanced users.
-            </p>
-          </div>
-          <div class="fqBox">
-            <h3>Does Investly actually invest my money?</h3>
-            <p class="ans">
-              Currently, Investly provides recommendations only. You decide
-              where to invest. In the future, we may integrate with brokers.
-            </p>
-          </div>
-          <div class="fqBox">
-            <h3>How does the AI make recommendations?</h3>
-            <p class="ans">
-              We analyze your goals, risk profile, and market data using AI
-              models to suggest suitable investment options.
-            </p>
-          </div>
+        <div class="fqBox">
+          <h3>Does Investly actually invest my money?</h3>
+          <p class="ans">
+            Currently, Investly provides recommendations only. You decide where
+            to invest. In the future, we may integrate with brokers.
+          </p>
         </div>
-      </section>
-      <section class="containerf">
+        <div class="fqBox">
+          <h3>How does the AI make recommendations?</h3>
+          <p class="ans">
+            We analyze your goals, risk profile, and market data using AI models
+            to suggest suitable investment options.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="containerf">
+      <div class="minfBox">
         <h1 style="text-align: center">
           Start Your Smart Investment Journey Today
         </h1>
         <div class="conaBox">
-          <a href="" class="conaBoxa">Get Started</a>
+          <a href="" class="headerButb"
+            >Get Started Free <ion-icon name="arrow-forward-outline"></ion-icon
+          ></a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
     <footer>
       <section class="containerg">
         <p>
@@ -577,6 +623,30 @@
         box.addEventListener("click", () => {
           box.classList.toggle("active");
         });
+      });
+
+      let currentRotation = 90;
+
+      window.addEventListener("scroll", () => {
+        const arrow = document.getElementById("arrowani");
+        const scrollY = window.scrollY;
+        const scrollableHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        const isAtBottom = scrollY >= scrollableHeight - 5;
+        const isAtTop = scrollY === 0;
+
+        // Decide rotation
+        if (isAtBottom) {
+          currentRotation = 270;
+        } else if (isAtTop) {
+          currentRotation = 90;
+        }
+
+        // Move vertically while scrolling (limit to 200px)
+        const moveDistance = Math.min(scrollY, 2100);
+        arrow.style.transform = `translateY(${moveDistance}px) rotate(${currentRotation}deg)`;
+        arrow.style.color = "#004fff";
       });
     </script>
   </body>
