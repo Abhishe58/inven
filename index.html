@@ -27,7 +27,7 @@
         height: 100vh;
         width: 100%;
         padding: 30px 30px;
-        background-image: url("imga.jpg");
+        background-image: url("imgd.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -51,7 +51,7 @@
         width: 192.48px;
         padding: 15px 15px;
         border-radius: 10px;
-        background: red;
+        background: #000000;
         color: white;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         text-decoration: none;
@@ -115,6 +115,38 @@
       }
       ion-icon {
         font-size: 20px;
+      }
+      .conbBox {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .minBoxb {
+        flex: 1 0 300px;
+        position: relative;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 1s;
+      }
+      .minBoximg {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .xyzBox {
+        position: relative;
+        padding: 10px;
       }
       .containerc h1 {
         width: 100%;
@@ -357,16 +389,11 @@
         left: 80%;
       }
       @media (max-width: 445px) {
-        .containera 
-        {
-height: 88vh;
-        }
         h1 {
-          font-size: 23px;
+          font-size: 21px;
           text-align: center;
         }
         main {
-          height: 100%;
           justify-content: start;
         }
         main h1 {
@@ -418,44 +445,78 @@ height: 88vh;
     </section>
     <section class="containerb">
       <h1>Too Many Options. Too Little Guidance.</h1>
-      <ul>
-        <li>
-          <ion-icon name="analytics-outline"></ion-icon>
-          <strong>Too Many Choices:</strong><br />
-          Stocks, crypto, mutual funds, FDs, real estate — it’s hard to know
-          where to start.
-        </li>
-        <li>
-          <ion-icon name="extension-puzzle-outline"></ion-icon>
-          <strong>Confusing Jargon:</strong><br />Terms like CAGR, NAV, P/E
-          ratio, and compounding scare beginners away.
-        </li>
-        <li>
-          <ion-icon name="close-outline"></ion-icon>
-          <strong>Biased Advice:</strong><br />Many platforms push their own
-          products instead of giving unbiased recommendations.
-        </li>
-        <li>
-          <ion-icon name="sad-outline"></ion-icon>
-          <strong>Fear of Loss:</strong><br />New investors worry about losing
-          money because they don’t understand risk management.
-        </li>
-        <li>
-          <ion-icon name="hourglass-outline"></ion-icon>
-          <strong>Time-Consuming Research: </strong><br />Analyzing markets,
-          comparing assets, and tracking portfolios takes too much effort.
-        </li>
-        <li>
-          <ion-icon name="sync-circle-outline"></ion-icon>
-          <strong>No Clear Goal Alignment:</strong><br />People often invest
-          randomly without a clear financial plan, leading to poor returns.
-        </li>
-        <li>
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          <strong>Trust Issues:</strong><br />Not knowing if a platform is
-          secure or compliant makes people hesitant to try.
-        </li>
-      </ul>
+      <div class="conbBox">
+        <div class="minBoxb">
+          <img src="1.png" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>Too Many Choices:</strong><br />
+              Stocks, crypto, mutual funds, FDs, real estate — it’s hard to know
+              where to start.
+            </p>
+          </div>
+        </div>
+        <div class="minBoxb">
+          <img src="2.png" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>Confusing Jargon</strong><br />
+              Terms like CAGR, NAV, P/E ratio, and compounding scare beginners
+              away.
+            </p>
+          </div>
+        </div>
+        <div class="minBoxb">
+          <img src="3.png" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>Biased Advice:</strong><br />
+              Many platforms push their own products instead of giving unbiased
+              recommendations.
+            </p>
+          </div>
+        </div>
+        <div class="minBoxb">
+          <img src="4.png" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>Fear of Loss:</strong><br />
+              New investors worry about losing money because they don’t
+              understand risk management.
+            </p>
+          </div>
+        </div>
+        <div class="minBoxb">
+          <img src="5.png" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>Time-Consuming Research:</strong><br />
+              Analyzing markets, comparing assets, and tracking portfolios takes
+              too much effort.
+            </p>
+          </div>
+        </div>
+        <div class="minBoxb">
+          <img src="6.png" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>No Clear Goal Alignment:</strong><br />
+              People often invest randomly without a clear financial plan,
+              leading to poor returns.
+            </p>
+          </div>
+        </div>
+        <div class="minBoxb">
+          <img src="7.webp" alt="" srcset="" class="minBoximg" />
+          <div class="xyzBox">
+            <p>
+              <strong>Trust Issues:</strong><br />
+              Not knowing if a platform is secure or compliant makes people
+              hesitant to try.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="containerc">
       <h1>Investly Makes Investing Easy</h1>
@@ -680,7 +741,7 @@ height: 88vh;
 
         // Move vertically while scrolling (limit to 200px)
         const scrollPercent = scrollY / scrollableHeight;
-        const maxBottomOffset = 6; // in vh
+        const maxBottomOffset = 5; // in vh
         const minBottomOffset = 20; // in vh
         const bottomOffset =
           maxBottomOffset - scrollPercent * (maxBottomOffset - minBottomOffset);
