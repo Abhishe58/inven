@@ -44,6 +44,11 @@
         color: white;
         font-size: 30px;
       }
+      .logoImg {
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+      }
       .headerBut {
         position: absolute;
         right: 0%;
@@ -100,8 +105,8 @@
         min-height: 50vh;
         width: 100%;
         padding: 30px 30px;
-        background-color: #010006;
-        color: white;
+        background-color: white;
+        color: black;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -174,7 +179,7 @@
         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
         border: 1px solid #666;
         cursor: pointer;
-        color: white;
+        color: black;
         transition: 1s;
       }
       .mincbox:hover {
@@ -218,17 +223,23 @@
         padding: 20px 20px;
         display: flex;
         align-items: center;
-        flex-direction: column;
         justify-content: center;
-        gap: 20px;
+      }
+      .aahBox {
+        position: relative;
+        background: linear-gradient(135deg, #3b3b3b, #000);
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
       .containerh h1 {
         text-align: center;
-        color: #101828;
+        color: white;
       }
       .fBoxform {
         position: relative;
-        width: 70%;
       }
       .fBoxform form {
         position: relative;
@@ -241,6 +252,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        color: white;
+      }
+      .formminBox h1 {
+        color: white;
       }
       .inputValue {
         padding: 10px 10px;
@@ -389,9 +404,8 @@
         left: 80%;
       }
       @media (max-width: 445px) {
-        .containera 
-        {
-height: 88vh;
+        .containera {
+          height: 88vh;
         }
         h1 {
           font-size: 23px;
@@ -408,7 +422,8 @@ height: 88vh;
         .minconbCard {
           flex: 1 0 260px;
         }
-        .mincbox {
+        .mincbox,
+        .minBoxb {
           flex: 1 0 260px;
         }
         .fBoxform {
@@ -430,12 +445,13 @@ height: 88vh;
   <body>
     <section class="containera">
       <header>
-        <p class="logo"><ion-icon name="logo-tableau"></ion-icon></p>
+        <!-- <p class="logo"><ion-icon name="logo-tableau"></ion-icon></p> -->
+        <img src="logo.jpeg" class="logoImg" alt="" srcset="" />
       </header>
       <main>
         <h1>INVESTLY</h1>
         <h2>Invest Smart. Grow Confidently.</h2>
-        <p>
+        <p style="width: 80%">
           AI-powered, personalized investment guidance across stocks, crypto,
           mutual funds, FDs, and more — all in one smart dashboard.
         </p>
@@ -580,56 +596,97 @@ height: 88vh;
       </div>
     </section>
     <section class="containerh">
-      <h1>Estimate Your Investment Growth</h1>
-      <div class="fBoxform">
-        <form>
-          <div class="formminBox">
-            <label>Investment Amount (₹)</label>
-            <input
-              type="number"
-              id="amount"
-              placeholder="Enter amount"
-              class="inputValue"
-              required
-            />
-          </div>
-          <div class="formminBox">
-            <label>Expected Annual Rate of Return (%)</label>
-            <input
-              type="number"
-              id="rate"
-              placeholder="Enter rate (e.g., 8)"
-              class="inputValue"
-              required
-            />
-          </div>
+      <div class="aahBox">
+        <h1>Estimate Your Investment Growth</h1>
+        <div class="fBoxform">
+          <form>
+            <div class="formminBox">
+              <label>Investment Amount (₹)</label>
+              <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                class="inputValue"
+                required
+              />
+            </div>
+            <div class="formminBox">
+              <label>Expected Annual Rate of Return (%)</label>
+              <input
+                type="number"
+                id="rate"
+                placeholder="Enter rate (e.g., 8)"
+                class="inputValue"
+                required
+              />
+            </div>
 
-          <div class="formminBox">
-            <label>Investment Duration (Years)</label>
-            <input
-              type="number"
-              id="years"
-              placeholder="Enter years"
-              class="inputValue"
-              required
-            />
-          </div>
+            <div class="formminBox">
+              <label>Investment Duration (Years)</label>
+              <input
+                type="number"
+                id="years"
+                placeholder="Enter years"
+                class="inputValue"
+                required
+              />
+            </div>
 
-          <div class="formminBox">
-            <label>Compounding Frequency</label>
-            <select id="frequency" class="inputValue">
-              <option value="1">Yearly</option>
-              <option value="4">Quarterly</option>
-              <option value="12">Monthly</option>
-            </select>
-          </div>
+            <div class="formminBox">
+              <label>Compounding Frequency</label>
+              <select id="frequency" class="inputValue">
+                <option value="1">Yearly</option>
+                <option value="4">Quarterly</option>
+                <option value="12">Monthly</option>
+              </select>
+            </div>
 
-          <button onclick="calculateGrowth(event)" class="submitForm">
-            Calculate
-          </button>
-        </form>
+            <button onclick="calculateGrowth(event)" class="submitForm">
+              Calculate
+            </button>
+          </form>
+        </div>
+        <div id="result"></div>
+        <div
+          style="
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <a href="" class="headerButb"
+            >Find Your Best Investment Options
+            <ion-icon name="arrow-forward-outline"></ion-icon
+          ></a>
+        </div>
       </div>
-      <div id="result"></div>
+    </section>
+    <section class="containeri">
+      <h1>Ready to Grow Your Wealth Smarter?</h1>
+      <p style="width: 70%; text-align: center">
+        Discover personalized investment strategies tailored to your income,
+        risk profile, and financial goals. With Investly’s Investment
+        Recommendation Tool, you’ll get clear, data-driven suggestions to make
+        confident investment decisions.
+      </p>
+      <div
+        style="
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <a
+          href="https://investly001.pythonanywhere.com"
+          target="_blank"
+          class="headerButb"
+          >Find Your Best Investment Options
+          <ion-icon name="arrow-forward-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="minconfBox"></div>
     </section>
     <section class="containeri">
       <h1>Frequently Asked Questions</h1>
