@@ -333,11 +333,13 @@
         line-height: 30px;
       }
       #arrowani {
-        /* relative to button */
         font-size: 28px;
         transition: transform 0.3s ease;
-        z-index: 1;
-        position: relative;
+        z-index: 999;
+        position: fixed; /* change from relative */
+        bottom: 40px;
+        right: 30px;
+        color: #004fff;
       }
 
       @keyframes bounce {
@@ -355,16 +357,11 @@
         left: 80%;
       }
       @media (max-width: 445px) {
-         .containera {
-        height: 50vh;
-         }
-        
         h1 {
           font-size: 21px;
           text-align: center;
         }
         main {
-          height: 100%;
           justify-content: start;
         }
         main h1 {
@@ -406,7 +403,11 @@
         </p>
         <a href="" class="headerBut"
           >Get Started Free
-          <ion-icon name="arrow-forward-outline" id="arrowani"></ion-icon
+          <ion-icon
+            name="arrow-forward-outline"
+            id="arrowani"
+            onclick="scrollArrow()"
+          ></ion-icon
         ></a>
       </main>
     </section>
@@ -634,6 +635,24 @@
         });
       });
 
+      function scrollArrow() {
+        const scrollY = window.scrollY;
+        const scrollableHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        if (scrollY < scrollableHeight - 10) {
+          window.scrollTo({
+            top: scrollableHeight,
+            behavior: "smooth",
+          });
+        } else {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }
+      }
+
       let currentRotation = 90;
 
       window.addEventListener("scroll", () => {
@@ -644,6 +663,8 @@
 
         const isAtBottom = scrollY >= scrollableHeight - 5;
         const isAtTop = scrollY === 0;
+        const maxScroll =
+          document.documentElement.scrollHeight - window.innerHeight;
 
         // Decide rotation
         if (isAtBottom) {
@@ -653,10 +674,40 @@
         }
 
         // Move vertically while scrolling (limit to 200px)
-        const moveDistance = Math.min(scrollY, 2100);
-        arrow.style.transform = `translateY(${moveDistance}px) rotate(${currentRotation}deg)`;
-        arrow.style.color = "#004fff";
+        const scrollPercent = scrollY / scrollableHeight;
+        const maxBottomOffset = 6; // in vh
+        const minBottomOffset = 20; // in vh
+        const bottomOffset =
+          maxBottomOffset - scrollPercent * (maxBottomOffset - minBottomOffset);
+
+        arrow.style.bottom = `${bottomOffset}vh`;
+        arrow.style.transform = `translateX(-50%) rotate(${currentRotation}deg)`;
       });
+
+      // let currentRotation = 90;
+
+      // window.addEventListener("scroll", () => {
+      //   const arrow = document.getElementById("arrowani");
+      //   const scrollY = window.scrollY;
+      //   const maxScroll =
+      //     document.documentElement.scrollHeight - window.innerHeight;
+
+      //   const isAtBottom = scrollY >= maxScroll - 5;
+      //   const isAtTop = scrollY === 0;
+
+      //   if (isAtBottom) {
+      //     currentRotation = 270;
+      //   } else if (isAtTop) {
+      //     currentRotation = 90;
+      //   }
+
+      //   const maxMove = 50; // Adjust for visible movement
+      //   const scrollPercent = scrollY / maxScroll;
+      //   const moveDistance = scrollPercent * maxMove;
+
+      //   arrow.style.transform = `translateY(${moveDistance}px) rotate(${currentRotation}deg)`;
+      //   arrow.style.color = "#004fff";
+      // });
     </script>
   </body>
 </html>
